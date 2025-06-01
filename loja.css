@@ -3,6 +3,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#escondido{
+    display: none;
+}
+
 header{
     height: 136px;
     background-color: rgba(64, 167, 152, 1);
@@ -29,6 +33,15 @@ header > a {
     color: rgba(255, 255, 255, 1);
     text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.44);
     text-decoration: none;
+    padding: 5px;
+    border-radius: 7px;
+    transition-delay: 20ms;
+    transition: all 0.4s ease;
+}
+
+header > a:hover{
+    background-color: rgb(55, 144, 131);
+
 }
 
 body{
@@ -122,4 +135,95 @@ footer > h1{
 
 footer > a{
     margin: auto 20px;
+}
+
+@media screen and (max-width: 1066px){
+    #produtos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 738px){
+    #produtos > div{
+        width: 200px;
+        height: 300px;
+        margin: 20px auto;
+        font-size: 28px;
+    }
+
+    .produto > img {
+        height: 150px;
+        width: 180px;
+    }
+
+    #titulo > h2{
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (max-width: 684px){
+    #produtos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #produtos > div > h4{
+        font-size: 0.9em;
+    }
+
+    .produto > h4{
+        font-size: 0.9em;
+    }
+
+
+    .produto > img {
+        height: 150px;
+        width: 180px;
+    }
+
+    #titulo > h2{
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 615px){
+
+    header{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        gap: 0px;
+        padding: 0px 20px;
+    }
+    header > img{
+        display: none;
+    }
+
+    header > a{
+        margin: auto;
+    }
+
+    #principal {
+        display: none;
+    }
+    #escondido{
+        display: flex;
+        margin: auto auto;
+        grid-column: 1/-1;
+    }
+
+    footer > h1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 383px){
+    main > div > input{
+        width: 100px;
+        margin: 17px 0px;
+        height: 30px;
+}
 }
